@@ -1,0 +1,53 @@
+#write python code to find area and perimeter of a rectangle, use required dockstrings and inline comments
+class Rectangle:
+    """
+    A class to represent a rectangle.
+
+    Attributes:
+        width (float): The width (or length) of the rectangle.
+        height (float): The height (or breadth) of the rectangle.
+    """
+
+    def __init__(self, width, height):
+        """
+        Initialize the Rectangle with width and height.
+
+        Args:
+            width (float): Length of the rectangle.
+            height (float): Breadth of the rectangle.
+        """
+        self.width = width      # Save width
+        self.height = height    # Save height
+
+    def area(self):
+        """
+        Calculate and return the area of the rectangle.
+
+        Returns:
+            float: Area = width × height
+        """
+        return self.width * self.height  # Area formula
+
+    def perimeter(self):
+        """
+        Calculate and return the perimeter of the rectangle.
+
+        Returns:
+            float: Perimeter = 2 × (width + height)
+        """
+        return 2 * (self.width + self.height)  # Perimeter formula
+
+
+
+# Ask user for length and breadth
+l = float(input("Enter the length of the rectangle: "))
+b = float(input("Enter the breadth of the rectangle: "))
+
+# Create a Rectangle object using user input
+rect = Rectangle(l, b)
+
+# Display results
+print("Area of the rectangle:", rect.area())
+print("Perimeter of the rectangle:", rect.perimeter())
+
+
